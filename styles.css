@@ -1,0 +1,155 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0d3b;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовки */
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+/* Панели с разделами */
+.update-section {
+    display: none;
+    padding: 20px;
+    background-color: #161e6d;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.update-section.active {
+    display: block;
+}
+
+/* Кнопки */
+button {
+    background-color: #012d4b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Список элементов */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    border-bottom: 1px solid #571818;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+li strong {
+    display: block;
+    font-size: 18px;
+    color: #f6fbff;
+}
+
+li span {
+    display: block;
+    color: #fffafa;
+    margin-bottom: 5px;
+}
+
+/* Placeholder image styles */
+img.placeholder {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+}
+
+/* Button container fixed at the bottom */
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(6, 11, 29, 0.9); /* Slightly transparent background */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensure it is on top of other content */
+}
+/* Стили для кнопки Смотреть */
+.item-details a {
+    display: inline-block;
+    background-color: #ffffff; /* Белый фон */
+    color: #010305; /* Синий текст для контраста */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убрать подчеркивание */
+    border: 1px solid #3498db; /* Синяя рамка */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.item-details a:hover {
+    background-color: #3498db; /* Синий фон при наведении */
+    color: #ffffff; /* Белый текст при наведении */
+}
+
+.item-details a:focus {
+    outline: 2px solid #3498db; /* Синий контур при фокусе */
+}
+/* Общие стили для кнопки Главное */
+.main-button {
+    position: absolute; /* Позиционирование относительно ближайшего позиционированного родителя */
+    top: 20px; /* Расстояние от верхнего края */
+    left: 20px; /* Расстояние от левого края */
+    background-color: #3498db; /* Синий фон */
+    color: #ffffff; /* Белый текст */
+    border: none; /* Убрать рамку */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+.main-button:hover {
+    background-color: #2980b9; /* Темно-синий фон при наведении */
+}
+
+.main-button:focus {
+    outline: 2px solid #ffffff; /* Белый контур при фокусе */
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-K Project</title>
+    <link rel="stylesheet" href="ztyles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            height: 100%;
+            background-image: url('your-image.jpg'); /* Replace with the correct path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px;
+            border-radius: 10px;
+            color: black;
+        }
+        .title {
+            font-size: 10vw; /* Responsive font size */
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .title span {
+            display: inline-block;
+            animation: explode 1.5s forwards;
+        }
+        @keyframes explode {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-input {
+            width: 90%;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-results {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .results-container {
+            font-size: 24px;
+        }
+        .film-result {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .film-result img {
+            width: 50px;
+            height: 75px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .film-result a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .film-result a:hover {
+            text-decoration: underline;
+        }
+        /* Initial styling for menu */
+/* Updated menu styling */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure menu is on top of other content */
+}
+
+/* Text and dots in the menu */
+.menu .menu-text {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Menu content styling */
+.menu-content {
+    position: fixed; /* Use fixed to keep it in place when scrolling */
+    top: 0;
+    left: 0;
+    background-color: #001f3f; /* Dark blue background */
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    width: 50vw; /* Expand to cover half of the viewport width */
+    height: 100vh; /* Full viewport height */
+    transform: translateX(-100%); /* Initially hide off-screen to the left */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 999; /* Ensure menu is on top of other content */
+}
+
+/* Visible state of menu content */
+.menu-content.open {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Link styling */
+.menu-content a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 30px 0;
+    font-size: 18px;
+}
+
+.menu-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+        footer {
+            margin-top: 20px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <span>A</span><span>-</span><span>K</span><span> </span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span>
+            </div>
+        </header>
+        <div class="search-box">
+            <form id="film-search-form">
+                <input type="text" id="film-name" class="search-input" placeholder="фильмы сериалы...">
+            </form>
+            <div id="film-results" class="search-results"></div>
+        </div>
+        <div class="menu">
+            <span class="menu-text">Меню</span>
+        </div>
+        <div class="menu-content">
+            <a href="random-films.html" id="random-films">Подборки</a>
+            <a href="favorites.html" id="favorites">Мои Закладки</a>
+            <a href="сndex.html" id="new-films">Новинки</a>
+        </div>
+        
+        <footer>
+            <p>❗<i><b>EvloevFilm:</b> Спасибо что выбирайте нас </i></p>
+            <p>🔗 <a href="https://t.me/TETRIX_UNO" target="_blank">Телеграм Разраб.</a></p>
+        </footer>
+    </div>
+    <script src="icripts.js"></script> <!-- Link to your JavaScript file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menu = document.querySelector('.menu');
+            var menuContent = document.querySelector('.menu-content');
+    
+            menu.addEventListener('click', function () {
+                menuContent.classList.toggle('open');
+            });
+    
+            // Optional: Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!menu.contains(event.target) && !menuContent.contains(event.target)) {
+                    menuContent.classList.remove('open');
+                }
+            });
+        });
+    </script>
+    

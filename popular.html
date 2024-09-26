@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Популярные Фильмы</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .title {
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        .results-container {
+            font-size: 24px;
+            text-align: left;
+        }
+        .film-result {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .film-result img {
+            width: 50px;
+            height: 75px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .film-result a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .film-result a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">Популярные Фильмы</div>
+        </header>
+        <div id="film-results" class="search-results"></div>
+    </div>
+    <script src="icripts.js"></script> <!-- Link to your JavaScript file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            searchFilms('popular');
+        });
+    </script>
+</body>
+</html>

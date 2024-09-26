@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои Закладки</title>
+    <link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="favorites.html">Мои Закладки</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Мои Закладки</h1>
+            <div class="sorting">
+                <label for="sort-select">Сортировать по:</label>
+                <select id="sort-select">
+                    <option value="time">Времени</option>
+                    <option value="name">Названию</option>
+                </select>
+            </div>
+        </header>
+        <main id="favorites-list"></main>
+    </div>
+
+    <script src="favorites.js"></script>
+</body>
+</html>
